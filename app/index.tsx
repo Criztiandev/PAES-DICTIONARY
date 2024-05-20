@@ -69,7 +69,19 @@ const RootScreen: React.FC = () => {
 
   if (isLoading) {
     return (
-      <View>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: 'rgb(16, 172, 132',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Image
+          source={require('assets/logo.png')}
+          contentFit="cover"
+          transition={1000}
+          style={{ backgroundColor: 'white', borderRadius: 100, width: 200, height: 200 }}
+        />
         <Text>Loading...</Text>
       </View>
     );
