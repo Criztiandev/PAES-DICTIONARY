@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 
 const IOS_SYSTEM_COLORS = {
   white: 'rgb(255, 255, 255)',
-  black: 'rgb(0, 0, 0)',
+  black: 'rgb(16, 172, 132)',
   light: {
     grey6: 'rgb(242, 242, 247)',
     grey5: 'rgb(230, 230, 235)',
@@ -24,9 +24,9 @@ const IOS_SYSTEM_COLORS = {
     grey3: 'rgb(70, 70, 73)',
     grey2: 'rgb(99, 99, 102)',
     grey: 'rgb(142, 142, 147)',
-    background: 'rgb(0, 0, 0)',
+    background: 'rgb(16, 172, 132)',
     foreground: 'rgb(255, 255, 255)',
-    root: 'rgb(0, 0, 0)',
+    root: 'rgb(16, 172, 132)',
     card: 'rgb(28, 28, 30)',
     destructive: 'rgb(254, 67, 54)',
     primary: 'rgb(3, 133, 255)',
