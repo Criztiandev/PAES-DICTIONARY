@@ -34,6 +34,7 @@ export default function RootLayout() {
             <NavThemeProvider value={NAV_THEME[colorScheme]}>
               <Stack screenOptions={SCREEN_OPTIONS}>
                 <Stack.Screen name="index" options={{ headerShown: false }} />
+                <Stack.Screen name="about/index" options={{ title: 'Details' }} />
               </Stack>
               <Toast />
             </NavThemeProvider>
