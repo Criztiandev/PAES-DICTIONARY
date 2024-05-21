@@ -1,8 +1,8 @@
 import { Image } from 'expo-image';
 import { View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 import { Text } from './nativewindui/Text';
-import { ScrollView } from 'react-native-gesture-handler';
 
 interface Props {
   title: string;

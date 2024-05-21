@@ -1,14 +1,11 @@
 import '../global.css';
 import 'expo-dev-client';
-import { ActionSheetProvider } from '@expo/react-native-action-sheet';
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { ThemeProvider as NavThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-import { SQLiteProvider } from 'expo-sqlite';
 import { StatusBar } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-
 import Toast from 'react-native-toast-message';
+
 import { useColorScheme, useInitialAndroidBarSync } from '~/lib/useColorScheme';
 import { NAV_THEME } from '~/theme';
 
@@ -29,17 +26,13 @@ export default function RootLayout() {
       />
 
       <GestureHandlerRootView style={{ flex: 1 }}>
-        <BottomSheetModalProvider>
-          <ActionSheetProvider>
-            <NavThemeProvider value={NAV_THEME[colorScheme]}>
-              <Stack screenOptions={SCREEN_OPTIONS}>
-                <Stack.Screen name="index" options={{ headerShown: false }} />
-                <Stack.Screen name="about/index" options={{ title: 'Details' }} />
-              </Stack>
-              <Toast />
-            </NavThemeProvider>
-          </ActionSheetProvider>
-        </BottomSheetModalProvider>
+          <NavThemeProvider value={NAV_THEME[colorScheme]}>
+            <Stack screenOptions={SCREEN_OPTIONS}>
+              <Stack.Screen name="index" options={{ headerShown: false }} />
+              <Stack.Screen name="about/index" options={{ title: 'Details' }} />
+            </Stack>
+            <Toast />
+          </NavThemeProvider>
       </GestureHandlerRootView>
     </>
   );

@@ -1,17 +1,16 @@
 import { Icon } from '@roninoss/icons';
+import DictionaryEntryDataset from 'data/dataset.json';
 import { Image } from 'expo-image';
 import { router } from 'expo-router';
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Text, View } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Toast from 'react-native-toast-message';
 
+import HeroCard from '~/components/HeroCard';
 import IconButton from '~/components/IconButton';
 import InputField from '~/components/InputField';
-
-import DictionaryEntryDataset from 'data/dataset.json';
-import HeroCard from '~/components/HeroCard';
-import { FlatList } from 'react-native-gesture-handler';
-import Toast from 'react-native-toast-message';
 
 interface DictionaryEntry {
   id: number;
